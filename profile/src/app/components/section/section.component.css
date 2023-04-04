@@ -1,9 +1,14 @@
 *{
   list-style-type: none;
+  background-color: #FFFEDF;
+}
+p {
+  font-size: 20px;
+
 }
 
 .section-title {
-    background-color: #d8d8d8;
+    background-color: #DFBA69;
     color: #333;
     padding: 10px;
   }
@@ -57,12 +62,12 @@
     background-color: #202020;
   }
 
-  /* Especiality */
+
   .specialties-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 20px;
-    text-align: center;
+   
   }
   
   .specialty-item {
@@ -91,43 +96,57 @@
 
 
 /* Para Centrar esas cartas de habilidades duras */
-  table {
-    font-family: Arial, sans-serif; 
-  }
-  .tools_it {
-    width: 90%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-left: 10px;
-
-  }
-
-  tr{
-  margin: 10px;
+.table-responsive {
+  margin: auto;
 }
-  td {
-    width: 7%;
-    border: 1px solid #cccccc;
-    border-radius: 100%;
-    
 
-  }
+table {
+  font-family: Arial, sans-serif; 
+  margin: 0 auto;
+  border-collapse: collapse;
+}
 
-  td.fill {
-    background-color: hsla(0, 0%, 67%, 0.822);
-  }
+.tools_it {
+  width: 90%;
+  margin-left: 10px;
+}
+
+tr {
+  display: inline-block;
+  margin: 10px;
+  padding: 5px;
+  width: 80%;
+}
+
+td {
+  width: 7%;
+  border-radius: 100%;
   
-  td.name {
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
-    padding: 10px 0;
-    width: 150px;
-    border-radius: 0%;
-    
-  }
 
-  *{
-    width: 100%;
+}
+
+td.fill {
+  
+  background-color: #5A2E2E;
+}
+
+td.name {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 0;
+  width: 150px;
+  border-radius: 0%;
+}
+
+
+
+@media (max-width: 767px) {
+  .specialties-grid {
+    grid-template-columns: 1fr;
   }
+  .specialty-item {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
